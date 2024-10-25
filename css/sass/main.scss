@@ -1,5 +1,5 @@
+@use './_components';
 @use 'variables';
-@use 'components';
 
 
 // Global reset
@@ -11,4 +11,241 @@
 
 body{
     color: variables.$black;
+    font-family: variables.$main-font;
+    font-weight: 700;
+
+    a{
+        text-decoration: none;
+    }
+
 }
+
+/***** Navbar *****/
+#navbar{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .top-nav{
+        border-top: 2px solid black;
+        height: 190px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 100px;
+
+        img{
+            width: 280px;
+            height: 125px;
+        }
+    }
+
+    // Compant Adress and Contact Details - Top right nav
+    .company-meta{
+        display: flex;
+        width: 600px;
+        height: 50px;
+        justify-content: space-between;
+
+        .address, .phone{
+            display: inherit;
+            align-items: center;
+
+            .title{
+                font-size: 13px;
+            }
+            p{
+                font-size: 26px;
+            }
+        }
+
+        i{
+            font-size: 30px;
+            color: variables.$primary;
+            padding: 10px;
+            border: 2px solid variables.$primary;
+            border-radius: 50px;
+            margin-right: 15px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+/***** Hero Section + Main Navigation Menu *****/
+.hero {
+    min-height: 800px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    background: linear-gradient(to top right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url('/assets/images/vent-hero-banner.jpg') no-repeat center top / cover;
+    position: relative; 
+
+    .bottom-curve{
+        bottom: -10px;
+        height: 80px;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    // Main Navigation Menu      
+      .navigation{
+        padding-left: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: variables.$primary;
+        color: variables.$white;
+        width: 90%;
+        margin: 0 auto;
+        height: 65px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+
+        .menu{
+            width: 100%;
+            padding-right: 80px;
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            height: fit-content;
+
+            .submenu{
+                display: none;
+            }
+            a{
+                color: white;
+            }
+
+            li{
+                padding: 10px 20px;
+            }
+
+            
+        }
+        .available{
+            background-color: variables.$secondary;
+            width: 260px;
+            height: 65px;
+            border-bottom-right-radius: 20px;
+            text-align: center;
+            font-size: 20px;
+            display: flex;                   
+            align-items: center;
+            justify-content: center;
+            line-height: 20px;
+
+            span{
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+    }
+    // stats banner in hero
+    .hero-stats{
+        background-color: white;
+        display: flex;
+        padding: 3px;
+        border-radius: 15px;
+        height: 250px;
+        width: 85%;
+        z-index: 999;
+
+        .google-review, .book-online{
+            width: 50%;
+            height: 100%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .google-review{
+            background-color: variables.$primary;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .rate{
+                p{
+                    font-size: 80px;
+                }
+                i{
+                    font-size: 25px;
+                }
+            }
+
+            .vertical-line{
+                height: 50%;
+            }
+
+            .reviews{
+                font-size: 35px;
+
+                span{
+                    font-size: 28px;
+                    font-weight: 400;
+                }
+            }
+        }
+        .book-online{
+            background-color: #000;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            flex-direction: column;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+
+            h1{
+                font-weight: 400;
+                font-size: 50px;
+
+                span{
+                    font-weight: 700;
+                }
+            }
+
+            button{
+                background-color: transparent;
+                border: none;
+                color: white;
+                font-size: 18px;
+                margin-top: 10px;
+                cursor: pointer;
+                
+                i{
+                    font-size: 25px;
+                    position: relative;
+                    top: 4px;
+                    margin-left: 8px;
+                    transition: transform 0.3s ease;
+                }
+
+            }
+
+            &:hover{
+                background-color: variables.$secondary;
+                transition: all ease-in-out .3ms;
+                i {
+                    transform: translateX(4px); /* Move the icon to the right */
+                }
+            }
+        }
+    }
+}
+  
+  
+        
+        
