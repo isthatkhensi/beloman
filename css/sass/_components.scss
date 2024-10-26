@@ -6,3 +6,49 @@
     margin: 0 20px;
 }
 
+.top-curve{
+    bottom: -10px;
+    height: 80px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.sec-title{
+    font-size: 45px;
+    color: variables.$primary;
+    text-align: center;
+}
+
+.sec-subtitle{
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    padding: 10px 0px 20px 0px;
+}
+
+.standard-btn{
+    background-color: variables.$secondary;
+    color: white;
+    border: none;
+    padding: 5px 20px 10px 20px;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: all ease-in .3s;
+    
+    
+    i{
+        font-size: 25px;
+        position: relative;
+        top: 5px;
+    }
+
+    &:hover{
+        background-color: variables.$primary;
+        cursor: pointer;
+    }
+}

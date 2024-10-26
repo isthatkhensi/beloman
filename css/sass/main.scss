@@ -64,17 +64,17 @@ body{
             font-size: 30px;
             color: variables.$primary;
             padding: 10px;
-            border: 2px solid variables.$primary;
+            border-color: variables.$primary;
             border-radius: 50px;
             margin-right: 15px;
         }
 
-        .container {
-            display: flex;
-            align-items: center;
+        a{
+            color: black;
         }
     }
 }
+
 /***** Hero Section + Main Navigation Menu *****/
 .hero {
     min-height: 800px;
@@ -85,16 +85,6 @@ body{
     color: white;
     background: linear-gradient(to top right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url('/assets/images/vent-hero-banner.jpg') no-repeat center top / cover;
     position: relative; 
-
-    .bottom-curve{
-        bottom: -10px;
-        height: 80px;
-        position: absolute;
-        width: 100%;
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
 
     // Main Navigation Menu      
       .navigation{
@@ -118,20 +108,64 @@ body{
             justify-content: space-between;
             list-style-type: none;
             height: fit-content;
+            transition: all 0.3s ease-in;
 
-            .submenu{
-                display: none;
+            .dropdown {
+                position: relative;
             }
+
+            .submenu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                background-color: white;
+                list-style: none;
+                padding: 0;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+                min-width: 250px;
+        
+                li {
+                    padding: 15px 20px;
+        
+                    a {
+                        color: black; 
+    
+                        &:hover{
+                            color: variables.$secondary;
+                        }
+                    }
+                }
+            }
+
+            .submenu li::after {
+                content: '';
+                display: block;
+                width: 85%;
+                height: 1px;
+                background-color: #ccc; /* Adjust color as needed */
+                position: absolute;
+                margin-top: 10px;
+                left: 7.5%; /* Centers the 85% width line */
+            }
+
+            .submenu li:last-child::after {
+                display: none; /* Removes line from the last item */
+            }
+
+
             a{
                 color: white;
             }
 
             li{
                 padding: 10px 20px;
-            }
 
-            
+                a:hover{
+                    color: variables.$secondary;
+                }
+            }
         }
+
         .available{
             background-color: variables.$secondary;
             width: 260px;
@@ -147,6 +181,13 @@ body{
             span{
                 font-size: 16px;
                 font-weight: 400;
+            }
+
+            &:hover{
+                background-color: white;
+                color: variables.$secondary;
+                transition: all ease-in .2s;
+                cursor: pointer;
             }
         }
     }
@@ -200,6 +241,7 @@ body{
                 }
             }
         }
+
         .book-online{
             background-color: #000;
             border-top-right-radius: 15px;
@@ -246,6 +288,464 @@ body{
     }
 }
   
-  
+/***** Testinomials *****/
+.testimonials{
+    padding: 85px 90px;
+    text-align: center;
+
+    // Review Container
+    .review {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 390px;
+        border-radius: 15px;
+        margin: auto;
+        padding: 10px;
+        margin-top: 30px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+        position: relative;
+
+        .reviews {
+            overflow: hidden;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .review__items {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 80px;
+            text-align: center;
+            box-sizing: border-box;
         
+            .quote{
+                padding: 0px 100px 15px 0px;
+                font-size: 20px;
+                line-height: 22px;
+                font-weight: 400;
+                
+            }
+
+            .rating i {
+                color: #FFD700;
+                font-size: 25px;
+                padding-bottom: 30px;
+            }
+        }
+        .review-btn {
+            background: transparent;
+            border: none;
+            font-size: 50px;
+            cursor: pointer;
+            color: black;
         
+            #prev {
+                position: absolute;
+                left: 10px;
+            }
+            
+            #next {
+                position: absolute;
+                right: 10px;
+            }
+        }
+    }
+}
+
+
+/***** Promotional Banner *****/
+#promo-banner{
+    background-color: variables.$primary;
+    color: white;
+    padding: 50px  120px;
+    display: flex;
+    justify-content: space-between;
+
+    h2{
+        font-size: 40px;
+        padding-bottom: 20px;
+        
+        span{
+            font-size: 35px;
+            color: #f5f5f5;
+        }
+    }
+
+    p{
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: .5px;
+    }
+
+    .standard-btn{
+        width: 290px;
+
+        &:hover{
+            background-color: white;
+            color: variables.$secondary;
+            transition: all ease-in .3s;
+        }
+    }
+}
+
+
+/***** Why Choose Us Section *****/
+
+.work-sec{
+    display: flex;
+
+    // Left side youtube screenshot
+    .yt-left {
+        width: 50%;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        a i{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 55px;
+            color: red;
+            text-decoration: none;
+            z-index: 10;
+            cursor: pointer;
+        }
+
+        &:hover{
+            
+            a i{
+                color: white;
+
+            }
+        }
+    }
+    
+    // Right side description
+    .desc-right {
+        width: 50%;
+        background-color: #000;
+        padding: 0px 80px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+
+        h2{
+            font-size: 35px;
+            padding-bottom: 15px;
+        }
+
+        p{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        .company-list{
+            display: flex;
+            padding-top: 25px;
+            
+            ul{
+                width: 50%;
+                font-weight: 400;
+    
+                li{
+                    height: 50px
+                }
+            }
+    
+            i{
+                font-size: 30px;
+                color: variables.$secondary;
+            }
+        }
+
+        // Call Us Now Area
+        .call-now{
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            
+            h3{
+                font-size: 30px;
+                width: 50%;
+            }
+
+            .phone-no{
+                i{
+                    font-size: 30px;
+                    padding-right: 20px;
+                    position: relative;
+                    bottom: 3px;
+                }
+                p{
+                    font-size: 30px;
+                    font-weight: 700;
+                }
+
+                height: 35px;
+                display: flex;
+                border-bottom: 2px solid white;
+                cursor: pointer;
+                transition: all ease-in .3s;
+
+                &:hover{
+                    
+                    border-color: variables.$secondary;
+                }
+            }
+        }
+    }
+}
+
+/***** Services & Product Sections *****/
+.services{
+    padding: 50px 90px;
+    text-align: center;
+    margin: 0 auto;
+
+    .sec-logo{
+        height: 150px;
+        padding-bottom: 15px;
+    }
+
+    .products{
+        display:flex;
+        margin: 0 auto;
+        padding-top: 30px;
+        width: 80%;
+        justify-content: space-between;
+
+        .product-block{
+            width: 250px;
+            height: 300px;
+            border: 3px solid variables.$secondary;
+            border-radius: 10px;
+            cursor: pointer;
+
+            img, .prod-name{
+                width: 100%;
+                padding: 10px;
+            }
+            img{
+                height: 80%
+            }
+            .prod-name{
+                height: 20%;
+                background-color: variables.$secondary;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+
+                i{
+                    position: relative;
+                    font-size: 25px;
+                    top: 1px;
+                    padding-left: 10px
+                }
+            }
+
+            &:hover{
+                border-color: variables.$primary;
+                transition: all ease-in .3s;
+                .prod-name{
+                    background-color: variables.$primary;
+                    transition: all ease-in .3s;
+                }
+            }
+        }
+
+        .shine {
+            position: relative;
+            overflow: hidden;
+        
+            &::before {
+                background: linear-gradient(
+                    to right,
+                    fade_out(#fff, 1) 0%,
+                    fade_out(#fff, 0.7) 100%
+                );
+                content: "";
+                display: block;
+                height: 100%;
+                left: -75%;
+                position: absolute;
+                top: 0;
+                transform: skewX(-25deg);
+                width: 50%;
+                z-index: 2;
+            }
+        
+            &:hover,
+            &:focus {
+                &::before {
+                    animation: shine 0.85s;
+                }
+            }
+        
+            @keyframes shine {
+                100% {
+                    left: 125%;
+                }
+            }
+        }
+    }
+}
+
+//Line section divider
+.line-divider{
+    display: block; 
+    margin: auto;
+}
+
+/***** Badge Credential Section *****/
+
+.badges{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px 90px;
+    position: relative;
+    z-index: 99;
+
+    .logo{
+        width: 200px;
+        
+        .g-review{
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 25px;
+
+            span{
+                font-size: 18px;
+                font-weight: 400;
+            }
+
+            .stars{
+                padding-top: 5px;
+                color: #E05F1A;
+            }
+        }
+
+        img{
+            width: 100%;
+            
+        }
+
+        .nate-logo{
+            display: block;
+            margin: 0 auto;
+            width: 100px !important; 
+        }
+    }
+}
+
+/***** Footer *****/
+
+footer{
+    margin-top: -100px;
+    width: 100%;
+    height: 400px;
+    background-image: url('/assets/images/vent-hero-banner.jpg');
+    background-position: center ;
+    background-size: cover;
+    position: relative;
+    z-index: 98;
+
+    .bottom-curve{
+        transform: scaleY(-1);
+        width: 100%;position: relative;
+        top: -1px;
+        position: absolute;
+        z-index: 98;
+    }
+
+    .overlay{
+        width: 100%;
+        height: 100%;
+        background-color: variables.$primary;
+        opacity: .9;
+
+        hr{
+            margin: 20px 90px;
+            border-color: #f5f5f5;
+            border-bottom: 1px;
+        }
+
+        .container{
+            padding-top: 150px;
+
+            .footer-content{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 30px 100px;
+
+                img{
+                    width: 280px;
+                    height: 125px;
+                }
+
+                .company-meta{
+                    display: flex;
+                    width: 600px;
+                    height: 50px;
+                    justify-content: space-between;
+                    color: white;
+            
+                    .address, .phone{
+                        display: inherit;
+                        align-items: center;
+            
+                        .title{
+                            font-size: 13px;
+                        }
+                        p{
+                            font-size: 26px;
+                        }
+                    }
+            
+                    i{
+                        font-size: 30px;
+                        color: white;
+                        padding: 10px;
+                        border-color: white;
+                        border-radius: 50px;
+                        margin-right: 15px;
+                    }
+
+                }
+            }
+        }
+
+    }
+
+    .copyright{
+        padding: 20px 0px;
+        width: 100%;
+        height: fit-content;
+        background-color: #000;
+        color: white;
+        text-align: center;
+        font-weight: 400;
+    }
+}

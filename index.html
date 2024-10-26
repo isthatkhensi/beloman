@@ -11,10 +11,10 @@
     <!-- Main Navigation -->
     <nav id="navbar">
         <div class="top-nav">
-            <img src="/assets/images/beloman-logo.png" alt="Beloman Logo"/>
+            <a href="index.html"><img src="/assets/images/beloman-logo.webp" alt="Beloman Logo"/></a>
             <div class="company-meta">
                 <div class="address">
-                    <i class='bx bxs-map'></i>
+                    <i class='bx bxs-map bx-border-circle'></i>
                     <div class="address-text">
                         <p class="title">Serving</p>
                         <p>Metro East, IL</p>
@@ -22,12 +22,11 @@
                 </div>
                 <div class="vertical-line"></div>
                 <div class="phone">
-                    <i class='bx bxs-phone'></i>
-                    <div class="phone-text">
+                    <i class='bx bxs-phone bx-border-circle'></i>
+                    <a href="tel:+555555555"><div class="phone-text">
                         <p class="title">Contact Us Today</p>
                         <p>555-555-555</p>
-
-                    </div>
+                    </div></a>
                 </div>
             </div>
         </div>
@@ -38,29 +37,29 @@
         <!-- Top Menu -->
         <div class="navigation">
             <ul class="menu">
-                <li><a href="#">HVAC Sales</a></li>
+                <li><a href="sales.html">HVAC Sales</a></li>
                 <li class="dropdown">
                   <a href="#">Services</a>
                   <ul class="submenu">
-                    <li><a href="#">Air Conditioning</a></li>
-                    <li><a href="#">Furnaces</a></li>
-                    <li><a href="#">Air Handlers</a></li>
-                    <li><a href="#">Ductless Systems</a></li>
-                    <li><a href="#">Heat Pumps</a></li>
-                    <li><a href="#">Indoor Air Quality</a></li>
-                    <li><a href="#">HVAC Maintenance</a></li>
-                    <li><a href="#">Commercial HVAC</a></li>
+                    <li><a href="sales.html">Air Conditioning</a></li>
+                    <li><a href="sales.html">Furnaces</a></li>
+                    <li><a href="sales.html">Air Handlers</a></li>
+                    <li><a href="sales.html">Ductless Systems</a></li>
+                    <li><a href="sales.html">Heat Pumps</a></li>
+                    <li><a href="sales.html">Indoor Air Quality</a></li>
+                    <li><a href="sales.html">HVAC Maintenance</a></li>
+                    <li><a href="sales.html">Commercial HVAC</a></li>
                   </ul>
                 </li>
                 <li><a href="#">Promotions</a></li>
                 <li class="dropdown">
                   <a href="#">About Us</a>
                   <ul class="submenu">
-                    <li><a href="#">Why Choose Us</a></li>
+                    <li><a href="inner.html">Why Choose Us</a></li>
                     <li><a href="#">Customer Reviews</a></li>
                   </ul>
                 </li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
               </ul>
             <div class="available">
                 <p>24/7 Emergency<br/><span>Service Available</span></p>
@@ -85,33 +84,141 @@
                 </button>
             </div>
         </div>
-        <img class="bottom-curve" src="/assets/images/curve.svg"/>
+        <img class="top-curve" src="/assets/images/curve.svg"/>
     </section>
+    <!-- Testinmonial Section -->
     <section class="testimonials">
-        <h2>We Always Put Our Customers First</h2>
-        <h3>Our 5-star reviews speak for themselves!</h3>
-
-        <div class="review-carousel">
-            <button class="carousel-btn prev"><i class='bx bx-chevron-left' ></i></button>
-                <div class="testimonials">
-                    <div class="carousel-slide">
-                        <p class="rating"><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i></p>
-                        <p>My A/C stopped cooling, so I called for help. They offered same-day or next-morning service and arrived punctually. The technician diagnosed and fixed the issue in under 15 minutes, with fair pricing. Their exceptional service ensures I'll contact them for future HVAC needs.</p>
-                        <h4>- Amy M. (A/C Repair)</h4>
-                    </div>
-                    <div class="carousel-slide">
-                        <p class="rating"></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i></p>
-                        <p>I couldn’t be happier with the service! The team was punctual, professional, and went above and beyond to ensure everything was perfect. I highly recommend them!</p>
-                        <h4>- - Alex G. (HVAV Install)</h4>
-                    </div>
-                    <div class="carousel-slide">
-                        <p class="rating"><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i></p>
-                        <p>Exceptional quality and attention to detail! They made sure every step of the process was smooth and stress-free. It’s rare to find such dedication these days.</p>
-                        <h4>- Taylor R. (Heat Pump)</h4>
-                    </div>
+        <h2 class="sec-title">We Always Put Our Customers First</h2>
+        <h3 class="sec-subtitle">Our 5-star reviews speak for themselves!</h3>
+        <div class="review">
+            <button class="review-btn" id="prev" onclick="previousReview()"><i class='bx bx-chevron-left' ></i></button>
+            <div class="reviews">
+                <div class="review__items">
+                    <p class="rating"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></p>
+                    <p class="quote">My A/C stopped cooling, so I called for help. They offered same-day or next-morning service and arrived punctually. The technician diagnosed and fixed the issue in under 15 minutes, with fair pricing. Their exceptional service ensures I'll contact them for future HVAC needs.</p>
+                    <h4>- Amy M. (A/C Repair)</h4>
+                    <button class="standard-btn">Read More <i class='bx bx-chevrons-right'></i></button>
                 </div>
-            <button class="carousel-btn next"><i class='bx bx-chevron-right' ></i></button>
+                <div class="review__items">
+                    <p class="rating"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></p>
+                    <p class="quote">I couldn’t be happier with the service! The team was punctual, professional, and went above and beyond to ensure everything was perfect. I highly recommend them!</p>
+                    <h4>- Alex G. (HVAC Install)</h4>
+                    <button class="standard-btn">Read More <i class='bx bx-chevrons-right'></i></button>
+                </div>
+                <div class="review__items">
+                    <p class="rating"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></p>
+                    <p class="quote">Exceptional quality and attention to detail! They made sure every step of the process was smooth and stress-free. It’s rare to find such dedication these days.</p>
+                    <h4>- Taylor R. (Heat Pump)</h4>
+                    <button class="standard-btn">Read More <i class='bx bx-chevrons-right'></i></button>
+                </div>
+            </div>
+            <button class="review-btn" id="next" onclick="nextReview()"><i class='bx bx-chevron-right' ></i></button>
         </div>
     </section>
+    <!-- Promotional Section -->
+    <section id="promo-banner">
+        <div class="promo-text">
+            <h2>Up to 11,800 Rebate on Daikin Fit Systems<span>*</span></h2>
+            <p>*Conditions apply. Call us for more details.</p>
+        </div>
+        <button class="standard-btn">View More <i class='bx bx-chevrons-right' ></i></button>
+    </section>
+    <!-- Why Choose Us Section - Jumbo YT video -->
+     <section class="work-sec">
+            <div class="yt-left">
+                <img src="/assets/images/diakin-on-pedestal.png" alt="Daikin fit HVAC screenshot">
+                <a href="https://youtu.be/18EF1pDH9pc?si=GX-xgczyhGvy8tsJ"><i class='bx bxl-youtube' ></i></a>
+            </div>
+            <div class="desc-right">
+                <h2>If Comfort Is Your Plan Call<br/> the BEL- O MAN!™</h2>
+                <p>The most trusted name in home comfort, BELOMAN, instills confidence from the moment our clients call. Our heating and cooling specialists are factory-certified, giving them an incredible background of knowledge and experience.<br/><br/>
+                Whether you have high energy bill concerns, need maintenance for your HVAC system, or are considering upgrading your existing air conditioner to a modern, energy-efficient style, BELOMAN is the place to call.</p>
+                <div class="company-list">
+                    <ul class='bx-ul'>
+                        <li><i class='bx bx-check'></i>Serving the Metro East Since 1959</li>
+                        <li><i class='bx bx-check'></i>Second-Generation Family-Owned</li>
+                    </ul>
+                    <ul class='bx-ul'>
+                        <li><i class='bx bx-check'></i>1,250+ Years of Combined Employee Experience</li>
+                        <li><i class='bx bx-check'></i>Local & National Awards</li>
+                    </ul>
+                </div>  
+                <div class="call-now">
+                    <h3>Call Us Now</h3>
+                    <div class="phone-no"><i class='bx bxs-phone'></i><p>555-555-555</p></div>
+                </div>                  
+            </div>
+     </section>
+     <section class="services">
+        <img class="sec-logo" src="/assets/images/beloman-aloha-guy.png" alt="">
+        <h2 class="sec-title">How Can We Help You Today</h2>
+        <h3 class="sec-subtitle">We are here for you 24/7!</h3>
+        <div class="products">
+           <div class="product-block shine">
+                <img src="assets/images/generic-ac-product.jpg" alt="">
+                <a href="sales.html"><div class="prod-name">Air Conditioning <i class='bx bx-chevrons-right' ></i></div></a>
+            </div>
+            <div class="product-block shine">
+                <img src="assets/images/daikin-furnace-product.png" alt="">
+                <a href="sales.html"><div class="prod-name">Furnaces <i class='bx bx-chevrons-right' ></i></div></a>
+            </div>
+            <div class="product-block shine">
+                <img src="assets/images/ac-dustless-product.jpg" alt="">
+                <a href="sales.html"><div class="prod-name">Ductless Systems <i class='bx bx-chevrons-right' ></i></div></a>
+            </div>
+            <div class="product-block shine">
+                <img src="/assets/images/generic-ac-fit-product.png" alt="">
+                <a href="sales.html"><div class="prod-name">Heat Pumps <i class='bx bx-chevrons-right' ></i></div></a>
+            </div>
+        </div>
+        
+     </section>
+     <img class="line-divider" src="/assets/images/line-divider.png" alt="">
+     <!-- Company Credentials & Badges -->
+     <section class="badges">
+        <div class="logo">
+            <div class="g-review">
+                <p>Google<br/><span>Customer Reviews</span><br/><div class="stars"><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i></div></p>
+            </div>
+        </div>
+        <div class="logo"><img src="/assets/images/facebook-stars.png" alt=""></div>
+        <div class="logo"><img class="nate-logo" src="/assets/images/nate-logo.jpg" alt="" height="100px" width="80px"></div>
+        <div class="logo"><img src="/assets/images/BB-accredit-badge.png" alt="" ></div>
+        <div class="logo"><img src="/assets/images/daikin-logo.png" alt=""></div>
+     </section>
+     
+     <!-- Footer -->
+     <footer>
+        <img class="bottom-curve" src="/assets/images/curve.svg" alt="">
+        <div class="overlay">
+            <div class="container">
+                <hr>
+                <div class="footer-content">
+                    <img src="/assets/images/beloman-logo.webp" alt="Beloman Logo"/>
+                    <div class="company-meta">
+                        <div class="address">
+                            <i class='bx bxs-map bx-border-circle'></i>
+                            <div class="address-text">
+                                <p class="title">Serving</p>
+                                <p>Metro East, IL</p>
+                            </div>
+                        </div>
+                        <div class="phone">
+                            <i class='bx bxs-phone bx-border-circle'></i>
+                            <div class="phone-text">
+                                <p class="title">Contact Us Today</p>
+                                <p>555-555-555</p>
+
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © 2023 Beloman. All Rights Reserved. Privacy Policy</p>
+        </div>
+     </footer>
+<script src="/js/script.js"></script>    
 </body>
 </html>
