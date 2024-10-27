@@ -70,6 +70,7 @@ nav .navigation .menu {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
+  height: -moz-fit-content;
   height: fit-content;
   transition: all 0.3s ease-in;
 }
@@ -177,6 +178,7 @@ nav .navigation .available:hover {
 .page-hero .hero-content .hero-banner {
   background-color: #EC001B;
   width: 80%;
+  height: -moz-fit-content;
   height: fit-content;
   padding: 50px 80px;
   border-radius: 20px;
@@ -268,6 +270,7 @@ nav .navigation .available:hover {
   background-color: #022D57;
   border-left: 25px solid #EC001B;
   color: white;
+  height: -moz-fit-content;
   height: fit-content;
   padding: 30px;
   border-top-right-radius: 10px;
@@ -447,101 +450,6 @@ nav .navigation .available:hover {
   font-weight: 400;
 }
 
-nav .navigation {
-  padding-left: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #022D57;
-  color: #ffffff;
-  width: 90%;
-  margin: 0 auto;
-  height: 65px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
-  z-index: 99;
-}
-nav .navigation .menu {
-  width: 100%;
-  padding-right: 80px;
-  display: flex;
-  justify-content: space-between;
-  list-style-type: none;
-  height: fit-content;
-  transition: all 0.3s ease-in;
-}
-nav .navigation .menu .dropdown {
-  position: relative;
-}
-nav .navigation .menu .dropdown:hover .submenu {
-  display: block;
-}
-nav .navigation .menu .submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  background-color: white;
-  list-style: none;
-  padding: 0;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-  min-width: 250px;
-}
-nav .navigation .menu .submenu li {
-  padding: 15px 20px;
-}
-nav .navigation .menu .submenu li a {
-  color: black;
-}
-nav .navigation .menu .submenu li a:hover {
-  color: #EC001B;
-}
-nav .navigation .menu .submenu li::after {
-  content: "";
-  display: block;
-  width: 85%;
-  height: 1px;
-  background-color: #ccc; /* Adjust color as needed */
-  position: absolute;
-  margin-top: 10px;
-  left: 7.5%; /* Centers the 85% width line */
-}
-nav .navigation .menu .submenu li:last-child::after {
-  display: none; /* Removes line from the last item */
-}
-nav .navigation .menu a {
-  color: white;
-}
-nav .navigation .menu li {
-  padding: 10px 20px;
-}
-nav .navigation .menu li a:hover {
-  color: #EC001B;
-}
-nav .navigation .available {
-  background-color: #EC001B;
-  width: 260px;
-  height: 65px;
-  border-bottom-right-radius: 20px;
-  text-align: center;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 20px;
-}
-nav .navigation .available span {
-  font-size: 16px;
-  font-weight: 400;
-}
-nav .navigation .available:hover {
-  background-color: white;
-  color: #EC001B;
-  transition: all ease-in 0.2s;
-  cursor: pointer;
-}
-
-/***** Page Title Header *****/
 * {
   margin: 0;
   padding: 0;
@@ -636,6 +544,7 @@ body a {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
+  height: -moz-fit-content;
   height: fit-content;
   transition: all 0.3s ease-in;
 }
@@ -1163,11 +1072,10 @@ footer .overlay .container .footer-content .company-meta i {
 footer .copyright {
   padding: 20px 0px;
   width: 100%;
+  height: -moz-fit-content;
   height: fit-content;
   background-color: #000;
   color: white;
   text-align: center;
   font-weight: 400;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=main.css.map */

@@ -1,5 +1,11 @@
-@use './_components';
-@use 'variables';
+// @use './_components';
+@use 'variables' as *;
+@use './components' as *;
+@use './pages/sales.scss';
+@use './pages/inner.scss';
+@use './pages/contact.scss';
+
+
 
 
 // Global reset
@@ -10,8 +16,8 @@
 }
 
 body{
-    color: variables.$black;
-    font-family: variables.$main-font;
+    color: $black;
+    font-family: $main-font;
     font-weight: 700;
 
     a{
@@ -62,9 +68,9 @@ body{
 
         i{
             font-size: 30px;
-            color: variables.$primary;
+            color: $primary;
             padding: 10px;
-            border-color: variables.$primary;
+            border-color: $primary;
             border-radius: 50px;
             margin-right: 15px;
         }
@@ -76,7 +82,7 @@ body{
 }
 
 /***** Hero Section + Main Navigation Menu *****/
-.hero {
+.home-hero {
     min-height: 800px;
     align-items: center;
     display: flex;
@@ -92,8 +98,8 @@ body{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: variables.$primary;
-        color: variables.$white;
+        background-color: $primary;
+        color: $white;
         width: 90%;
         margin: 0 auto;
         height: 65px;
@@ -112,6 +118,11 @@ body{
 
             .dropdown {
                 position: relative;
+        
+                // Show submenu on hover
+                &:hover .submenu {
+                    display: block;
+                }
             }
 
             .submenu {
@@ -131,7 +142,7 @@ body{
                         color: black; 
     
                         &:hover{
-                            color: variables.$secondary;
+                            color: $secondary;
                         }
                     }
                 }
@@ -161,13 +172,13 @@ body{
                 padding: 10px 20px;
 
                 a:hover{
-                    color: variables.$secondary;
+                    color: $secondary;
                 }
             }
         }
 
         .available{
-            background-color: variables.$secondary;
+            background-color: $secondary;
             width: 260px;
             height: 65px;
             border-bottom-right-radius: 20px;
@@ -185,7 +196,7 @@ body{
 
             &:hover{
                 background-color: white;
-                color: variables.$secondary;
+                color: $secondary;
                 transition: all ease-in .2s;
                 cursor: pointer;
             }
@@ -212,7 +223,7 @@ body{
         }
 
         .google-review{
-            background-color: variables.$primary;
+            background-color: $primary;
             border-top-left-radius: 15px;
             border-bottom-left-radius: 15px;
             display: flex;
@@ -278,7 +289,7 @@ body{
             }
 
             &:hover{
-                background-color: variables.$secondary;
+                background-color: $secondary;
                 transition: all ease-in-out .3ms;
                 i {
                     transform: translateX(4px); /* Move the icon to the right */
@@ -362,7 +373,7 @@ body{
 
 /***** Promotional Banner *****/
 #promo-banner{
-    background-color: variables.$primary;
+    background-color: $primary;
     color: white;
     padding: 50px  120px;
     display: flex;
@@ -389,7 +400,7 @@ body{
 
         &:hover{
             background-color: white;
-            color: variables.$secondary;
+            color: $secondary;
             transition: all ease-in .3s;
         }
     }
@@ -471,7 +482,7 @@ body{
     
             i{
                 font-size: 30px;
-                color: variables.$secondary;
+                color: $secondary;
             }
         }
 
@@ -506,7 +517,7 @@ body{
 
                 &:hover{
                     
-                    border-color: variables.$secondary;
+                    border-color: $secondary;
                 }
             }
         }
@@ -534,7 +545,7 @@ body{
         .product-block{
             width: 250px;
             height: 300px;
-            border: 3px solid variables.$secondary;
+            border: 3px solid $secondary;
             border-radius: 10px;
             cursor: pointer;
 
@@ -547,7 +558,7 @@ body{
             }
             .prod-name{
                 height: 20%;
-                background-color: variables.$secondary;
+                background-color: $secondary;
                 color: white;
                 display: flex;
                 justify-content: center;
@@ -564,10 +575,10 @@ body{
             }
 
             &:hover{
-                border-color: variables.$primary;
+                border-color: $primary;
                 transition: all ease-in .3s;
                 .prod-name{
-                    background-color: variables.$primary;
+                    background-color: $primary;
                     transition: all ease-in .3s;
                 }
             }
@@ -682,7 +693,7 @@ footer{
     .overlay{
         width: 100%;
         height: 100%;
-        background-color: variables.$primary;
+        background-color: $primary;
         opacity: .9;
 
         hr{

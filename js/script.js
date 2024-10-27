@@ -49,3 +49,14 @@ document.querySelectorAll('.dropdown').forEach(dropdown => {
         submenu.style.display = 'none';
     });
 });
+
+
+// Tab Navigation Functionality
+function openSpec(specLabel) {
+    var i;
+    var x = document.getElementsByClassName("spec");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    document.getElementById(specLabel).style.display = "block";  
+  }
