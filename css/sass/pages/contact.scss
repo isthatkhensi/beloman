@@ -1,0 +1,99 @@
+@use '../_variables' as *;
+@use '../_components' as *;
+
+
+.contact-container{
+    margin-top: 30px;
+    width: 90%;
+    margin: 30px auto 0px auto;
+    position: relative; 
+    z-index: 99999;
+    display: flex;
+    justify-content: space-between;
+
+    .page-content{
+        width: 70%;
+        // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        height: fit-content;
+        background-color: rgba(234, 234, 234, 0.5);
+        img{
+            width: 100%;
+        }
+
+        .content{
+            padding: 50px;
+
+            h2{
+                color: $primary;
+                font-size: 30px;
+                padding-bottom: 10px;
+            }
+
+            p{
+                font-weight: 400;
+                padding-bottom: 20px;
+            }
+
+            .included-block{
+                font-weight: 400;
+    
+                i{
+                    font-size: 40px;
+                    color: $secondary;
+                }
+    
+                span{
+                    font-weight: 700;
+                }
+    
+                li{
+                    height: 80px;
+                }
+            }
+        }
+
+        .company-info{
+            display: flex;
+            padding: 50px 0px 0px 20px;
+            justify-content: space-between;
+            font-weight: 400;
+
+            ul{
+                width: 45%;
+
+                li{
+                    height: 100px;
+                    font-size: 20px;
+
+                    i{
+                        font-size: 35px;
+                        color: $primary;
+                    }
+                }
+
+                .list-align{
+                    display: flex;
+                    align-items: center;
+
+                    &:nth-child(2){
+                        margin-left: 50px;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    .sidebar{
+        .learn-more-block-color{
+            margin-top: 30px;
+            background-color: $primary;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+    }
+    
+}
+

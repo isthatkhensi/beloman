@@ -49,6 +49,101 @@
   cursor: pointer;
 }
 
+.included-block {
+  margin: 20px 0px;
+  background-color: #dee2e6;
+  padding: 30px 50px;
+}
+.included-block .container {
+  display: flex;
+}
+.included-block .container ul {
+  width: 50%;
+}
+.included-block .container ul li {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.included-block .container ul li i {
+  color: #EC001B;
+  font-size: 30px;
+}
+
+.sidebar {
+  width: 27%;
+}
+.sidebar .promo-block {
+  background-color: #022D57;
+  padding: 30px;
+  color: white;
+}
+.sidebar .promo-block h2 {
+  font-size: 30px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.sidebar .promo-block p {
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+}
+.sidebar .promo-block button {
+  width: 100%;
+}
+.sidebar .lead-form {
+  margin-top: 30px;
+  background-color: black;
+  padding: 30px;
+}
+.sidebar .lead-form h3 {
+  color: white;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.sidebar .lead-form form {
+  width: 100%;
+}
+.sidebar .lead-form form input {
+  width: 100%;
+  border: none;
+  padding: 15px 10px;
+  border-radius: 2px;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 10px;
+}
+.sidebar .lead-form form textarea {
+  width: 100%;
+  height: 100px;
+  padding: 15px 10px;
+  border-radius: 2px;
+  font-family: inherit;
+}
+.sidebar .lead-form form button {
+  width: 100%;
+}
+.sidebar .reviews-ratings {
+  margin-top: 30px;
+  border: 2px solid #022D57;
+  color: #022D57;
+  text-align: center;
+  padding: 30px 0px;
+}
+.sidebar .reviews-ratings i {
+  font-size: 25px;
+  padding: 0px 5px 15px 5px;
+}
+.sidebar .learn-more-block {
+  margin-top: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-image: url("/assets/images/testimonial-bg.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  padding: 30px;
+  text-align: center;
+}
+
 nav .navigation {
   padding-left: 80px;
   display: flex;
@@ -144,4 +239,443 @@ nav .navigation .available:hover {
   cursor: pointer;
 }
 
-/***** Page Title Header *****//*# sourceMappingURL=inner.css.map */
+/***** Hero Section *****/
+.page-hero {
+  height: 700px;
+  height: 700px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/assets/images/heating-hero-banner.jpg") no-repeat center top/cover;
+  position: relative;
+  z-index: 97;
+  margin-top: -40px;
+}
+.page-hero .hero-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.page-hero .hero-content h1 {
+  font-size: 55px;
+  font-weight: 400;
+  padding-bottom: 50px;
+}
+.page-hero .hero-content h1 span {
+  font-weight: 700;
+}
+.page-hero .hero-content .hero-banner {
+  background-color: #EC001B;
+  width: 80%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 50px 80px;
+  border-radius: 20px;
+  margin: 50px 0px;
+}
+.page-hero .hero-content .hero-banner h2 {
+  font-size: 35px;
+  font-weight: 400;
+  padding-bottom: 25px;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.page-hero .hero-content .hero-banner p {
+  font-weight: 400;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.page-hero .hero-content .quote-btn {
+  margin-top: 20px;
+  background-color: white;
+  color: #022D57;
+  padding: 5px 20px 15px 20px;
+  border-radius: 30px;
+  border: none;
+}
+.page-hero .hero-content .quote-btn i {
+  position: relative;
+  top: 5px;
+  font-size: 25px;
+  padding-left: 20px;
+}
+
+/***** Learn More Section *****/
+.learn-more {
+  width: 90%;
+  margin: 0 auto;
+  padding: 60px 0px 0px 0px;
+  box-shadow: 1px 6px 17px rgba(0, 0, 0, 0.17);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.learn-more .sm-sec-title {
+  text-align: center;
+  color: #EC001B;
+  font-size: 35px;
+  padding-bottom: 15px;
+}
+.learn-more .sec-desc {
+  text-align: center;
+  line-height: 25px;
+  font-weight: 400;
+  color: #282C37;
+}
+.learn-more .tab-container {
+  padding-top: 50px;
+  width: 90%;
+  margin: 0 auto;
+}
+.learn-more .tab-container .tab-labels {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+.learn-more .tab-container .tab-labels button {
+  width: 33%;
+  height: 100%;
+  margin: 0px;
+  border: none;
+  background-color: #022D57;
+  color: white;
+  cursor: pointer;
+}
+.learn-more .tab-container .tab-labels button:hover {
+  background: #000;
+  transition: background ease-in 0.3s;
+}
+.learn-more .tab-container .tab-content {
+  padding: 30px 0px;
+}
+.learn-more .tab-container .tab-content img {
+  width: 100%;
+  padding-bottom: 20px;
+}
+.learn-more .tab-container .tab-content p {
+  font-weight: 400;
+  line-height: 25px;
+}
+.learn-more .tab-container .tab-content .tab-block {
+  margin: 20px 0px;
+  background-color: #022D57;
+  border-left: 25px solid #EC001B;
+  color: white;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 30px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.learn-more .tab-container .tab-content .tab-block .bx-ul {
+  margin-left: 80px;
+}
+.learn-more .tab-container .tab-content .tab-block li {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 400;
+}
+.learn-more .tab-container .tab-content .tab-block .icon-sq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.learn-more .tab-container .tab-content .tab-block i {
+  background-color: #EC001B;
+  font-size: 30px;
+  padding: 10px;
+  border-radius: 30px;
+  width: 50px;
+}
+.learn-more .tab-container .tab-content .tab-block .condition {
+  padding-left: 25px;
+}
+.learn-more .tab-container .tab-content h3 {
+  color: #EC001B;
+  font-size: 25px;
+  padding: 10px 0px;
+}
+.learn-more .contact-banner {
+  background: #000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.learn-more .contact-banner h4 {
+  font-size: 30px;
+}
+.learn-more .contact-banner .contact-btns {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.learn-more .contact-banner .contact-btns .round-btn {
+  color: #022D57;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  padding: 10px 50px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.learn-more .contact-banner .contact-btns .round-btn i {
+  position: relative;
+  padding: 5px 5px;
+  border-radius: 50px;
+  top: -1px;
+  font-size: 25px;
+  color: #EC001B;
+}
+.learn-more .contact-banner .contact-btns .red {
+  background-color: #EC001B;
+  color: white;
+}
+.learn-more .contact-banner .contact-btns .red i {
+  margin-right: 50px;
+  background-color: white;
+}
+.learn-more .contact-banner .contact-btns .red:hover {
+  background-color: white;
+  color: #022D57;
+}
+.learn-more .contact-banner .contact-btns .red:hover i {
+  color: white;
+  background-color: #EC001B;
+}
+.learn-more .contact-banner .contact-btns .white {
+  background-color: white;
+  color: #022D57;
+}
+.learn-more .contact-banner .contact-btns .white:hover {
+  background-color: #EC001B;
+  color: white;
+}
+.learn-more .contact-banner .contact-btns .white:hover i {
+  color: #EC001B;
+  background-color: white;
+}
+.learn-more .contact-banner .contact-btns .white i {
+  background-color: #EC001B;
+  color: white;
+}
+
+.bg-testimonial {
+  margin: 50px 90px;
+  border-radius: 15px;
+  box-shadow: 1px 6px 20px rgba(40, 44, 55, 0.23);
+  background-image: url("/assets/images/testimonial-bg.jpg");
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+}
+.bg-testimonial .testimonials {
+  width: 70%;
+  padding: 0px 90px 0px 0px;
+}
+.bg-testimonial .testimonials .review {
+  margin-top: 0px;
+}
+.bg-testimonial .testimonials .review .review__items .rating, .bg-testimonial .testimonials .review .review__items h4 {
+  text-align: left;
+}
+.bg-testimonial .testimonials .review .review__items .quote {
+  padding-right: 0px;
+  text-align: left;
+}
+.bg-testimonial .google-review {
+  width: 30%;
+  height: 390px;
+  background-color: #022D57;
+  color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bg-testimonial .google-review .rate p {
+  font-size: 90px;
+}
+.bg-testimonial .google-review .rate i {
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+.bg-testimonial .google-review hr {
+  margin: 10px 0px;
+  width: 50%;
+}
+.bg-testimonial .google-review .reviews {
+  font-size: 35px;
+}
+.bg-testimonial .google-review .reviews span {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+nav .navigation {
+  padding-left: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #022D57;
+  color: #ffffff;
+  width: 90%;
+  margin: 0 auto;
+  height: 65px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+nav .navigation .menu {
+  width: 100%;
+  padding-right: 80px;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  height: -moz-fit-content;
+  height: fit-content;
+  transition: all 0.3s ease-in;
+}
+nav .navigation .menu .dropdown {
+  position: relative;
+}
+nav .navigation .menu .dropdown:hover .submenu {
+  display: block;
+}
+nav .navigation .menu .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: white;
+  list-style: none;
+  padding: 0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  min-width: 250px;
+}
+nav .navigation .menu .submenu li {
+  padding: 15px 20px;
+}
+nav .navigation .menu .submenu li a {
+  color: black;
+}
+nav .navigation .menu .submenu li a:hover {
+  color: #EC001B;
+}
+nav .navigation .menu .submenu li::after {
+  content: "";
+  display: block;
+  width: 85%;
+  height: 1px;
+  background-color: #ccc; /* Adjust color as needed */
+  position: absolute;
+  margin-top: 10px;
+  left: 7.5%; /* Centers the 85% width line */
+}
+nav .navigation .menu .submenu li:last-child::after {
+  display: none; /* Removes line from the last item */
+}
+nav .navigation .menu a {
+  color: white;
+}
+nav .navigation .menu li {
+  padding: 10px 20px;
+}
+nav .navigation .menu li a:hover {
+  color: #EC001B;
+}
+nav .navigation .available {
+  background-color: #EC001B;
+  width: 260px;
+  height: 65px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 20px;
+}
+nav .navigation .available span {
+  font-size: 16px;
+  font-weight: 400;
+}
+nav .navigation .available:hover {
+  background-color: white;
+  color: #EC001B;
+  transition: all ease-in 0.2s;
+  cursor: pointer;
+}
+
+/***** Page Title Header *****/
+.page-header {
+  background-color: black;
+  width: 100%;
+  height: 180px;
+  padding: 0px 90px;
+  color: white;
+  position: relative;
+  z-index: 97;
+  margin-top: -40px;
+  display: flex;
+  align-items: center;
+}
+.page-header h1 {
+  font-size: 40px;
+  padding-top: 10px;
+}
+
+.sales-container {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: -30px;
+  position: relative;
+  z-index: 99999;
+  display: flex;
+  justify-content: space-between;
+}
+.sales-container .page-content {
+  width: 70%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.sales-container .page-content img {
+  width: 100%;
+}
+.sales-container .page-content .content {
+  padding: 50px;
+}
+.sales-container .page-content .content h2 {
+  color: #022D57;
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+.sales-container .page-content .content p {
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+.sales-container .page-content .content .included-block {
+  font-weight: 400;
+}
+.sales-container .page-content .content .included-block i {
+  font-size: 40px;
+  color: #EC001B;
+}
+.sales-container .page-content .content .included-block span {
+  font-weight: 700;
+}
+.sales-container .page-content .content .included-block li {
+  height: 80px;
+}/*# sourceMappingURL=inner.css.map */

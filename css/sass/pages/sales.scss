@@ -301,28 +301,6 @@ nav .navigation{
                 padding: 10px 0px;
             }
 
-            .included-block{
-                margin: 20px 0px;
-                background-color: #dee2e6;
-                padding: 30px 50px;
-
-                .container{
-                    display: flex;
-                ul{
-                    width: 50%;
-
-                    li{
-                        height: 50px;
-                        display: flex;
-                        align-items: center;
-                        i{
-                            color: $secondary;
-                            font-size: 30px;
-                        }
-                    }
-                }
-                }
-            }
         }
     }
 
