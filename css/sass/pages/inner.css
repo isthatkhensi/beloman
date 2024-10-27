@@ -144,13 +144,24 @@
   text-align: center;
 }
 
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 nav .navigation {
   padding-left: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #022D57;
-  color: #ffffff;
+  color: white;
   width: 90%;
   margin: 0 auto;
   height: 65px;
@@ -184,6 +195,7 @@ nav .navigation .menu .submenu {
   padding: 0;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
   min-width: 250px;
+  z-index: 100000;
 }
 nav .navigation .menu .submenu li {
   padding: 15px 20px;
@@ -199,13 +211,13 @@ nav .navigation .menu .submenu li::after {
   display: block;
   width: 85%;
   height: 1px;
-  background-color: #ccc; /* Adjust color as needed */
+  background-color: #ccc;
   position: absolute;
   margin-top: 10px;
-  left: 7.5%; /* Centers the 85% width line */
+  left: 7.5%;
 }
 nav .navigation .menu .submenu li:last-child::after {
-  display: none; /* Removes line from the last item */
+  display: none;
 }
 nav .navigation .menu a {
   color: white;
@@ -296,12 +308,18 @@ nav .navigation .available:hover {
   padding: 5px 20px 15px 20px;
   border-radius: 30px;
   border: none;
+  cursor: pointer;
+  transition: all ease-in 0.3s;
 }
 .page-hero .hero-content .quote-btn i {
   position: relative;
   top: 5px;
   font-size: 25px;
   padding-left: 20px;
+}
+.page-hero .hero-content .quote-btn:hover {
+  background-color: #022D57;
+  color: white;
 }
 
 /***** Learn More Section *****/
@@ -422,53 +440,68 @@ nav .navigation .available:hover {
   cursor: pointer;
 }
 .learn-more .contact-banner .contact-btns .round-btn {
-  color: #022D57;
-  border-radius: 50px;
-  border: none;
-  cursor: pointer;
-  padding: 10px 50px;
-  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6rem;
   font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 230px;
+  transition: all ease-in 0.3s;
 }
 .learn-more .contact-banner .contact-btns .round-btn i {
-  position: relative;
-  padding: 5px 5px;
-  border-radius: 50px;
-  top: -1px;
-  font-size: 25px;
-  color: #EC001B;
+  font-size: 30px;
+}
+.learn-more .contact-banner .contact-btns .round-btn .text {
+  font-size: 20px;
+}
+.learn-more .contact-banner .contact-btns .round-btn .icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .learn-more .contact-banner .contact-btns .red {
   background-color: #EC001B;
   color: white;
+  padding: 10px 25px 10px 10px;
 }
-.learn-more .contact-banner .contact-btns .red i {
-  margin-right: 50px;
+.learn-more .contact-banner .contact-btns .red .icon {
   background-color: white;
+  color: #EC001B;
 }
 .learn-more .contact-banner .contact-btns .red:hover {
   background-color: white;
   color: #022D57;
 }
-.learn-more .contact-banner .contact-btns .red:hover i {
-  color: white;
+.learn-more .contact-banner .contact-btns .red:hover .icon {
   background-color: #EC001B;
+}
+.learn-more .contact-banner .contact-btns .red:hover .icon i {
+  color: white;
 }
 .learn-more .contact-banner .contact-btns .white {
   background-color: white;
   color: #022D57;
+  width: 300px;
+  padding: 10px 10px 10px 25px;
+}
+.learn-more .contact-banner .contact-btns .white .icon {
+  background-color: #EC001B;
+  color: white;
 }
 .learn-more .contact-banner .contact-btns .white:hover {
   background-color: #EC001B;
   color: white;
 }
-.learn-more .contact-banner .contact-btns .white:hover i {
-  color: #EC001B;
+.learn-more .contact-banner .contact-btns .white:hover .icon {
   background-color: white;
 }
-.learn-more .contact-banner .contact-btns .white i {
-  background-color: #EC001B;
-  color: white;
+.learn-more .contact-banner .contact-btns .white:hover .icon i {
+  color: #EC001B;
 }
 
 .bg-testimonial {
@@ -531,14 +564,14 @@ nav .navigation {
   justify-content: space-between;
   align-items: center;
   background-color: #022D57;
-  color: #ffffff;
+  color: white;
   width: 90%;
   margin: 0 auto;
   height: 65px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
-  z-index: 99;
+  z-index: 9999999;
 }
 nav .navigation .menu {
   width: 100%;
@@ -565,6 +598,7 @@ nav .navigation .menu .submenu {
   padding: 0;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
   min-width: 250px;
+  z-index: 999999;
 }
 nav .navigation .menu .submenu li {
   padding: 15px 20px;
@@ -580,13 +614,13 @@ nav .navigation .menu .submenu li::after {
   display: block;
   width: 85%;
   height: 1px;
-  background-color: #ccc; /* Adjust color as needed */
+  background-color: #ccc;
   position: absolute;
   margin-top: 10px;
-  left: 7.5%; /* Centers the 85% width line */
+  left: 7.5%;
 }
 nav .navigation .menu .submenu li:last-child::after {
-  display: none; /* Removes line from the last item */
+  display: none;
 }
 nav .navigation .menu a {
   color: white;
@@ -643,11 +677,12 @@ nav .navigation .available:hover {
   margin: 0 auto;
   margin-top: -30px;
   position: relative;
-  z-index: 99999;
   display: flex;
   justify-content: space-between;
+  z-index: 999998;
 }
 .sales-container .page-content {
+  position: relative;
   width: 70%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }

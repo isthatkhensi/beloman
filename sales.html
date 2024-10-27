@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="/assets/images/beloman-aloha-guy.png" type="image/x-icon">
     <title>Beloman - HVAC Sales</title>
 </head>
 <body>
@@ -61,7 +62,31 @@
             </div>
         </div>
     </nav>
-
+    <div class="mobile-nav">
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn"><i class='bx bx-menu-alt-left'></i></button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="sales.html">HVAC Sales</a>
+                <a href="#">Services</a>
+                    <a class="list-indent" href="sales.html">Air Conditioning</a>
+                    <a class="list-indent" href="sales.html">Furnaces</a>
+                    <a class="list-indent" href="sales.html">Air Handlers</a>
+                    <a class="list-indent" href="sales.html">Ductless Systems</a>
+                    <a class="list-indent" href="sales.html">Heat Pumps</a>
+                    <a class="list-indent" href="sales.html">Indoor Air Quality</a>
+                    <a class="list-indent" href="sales.html">HVAC Maintenance</a>
+                    <a class="list-indent" href="sales.html">Commercial HVAC</a>
+                <a href="#">Promotions</a>
+                <a href="#">About Us</a>
+                    <a class="list-indent" href="inner.html">Why Choose Us</a>
+                    <a class="list-indent" href="#">Customer Reviews</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="available">
+            <p>24/7 Emergency<br/><span>Service Available</span></p>
+        </div>
+    </div>
     <!-- Hero Section -->
     <section class="page-hero">
         <div class="hero-content">
@@ -164,9 +189,15 @@
             <div class="contact-banner">
                 <h4>Get a Free Quote<br/>on a New System</h4>
                 <div class="contact-btns">
-                    <button class="round-btn red"><i class='bx bxs-phone' ></i> 555-555-555</button>
+                    <a href="/contact.html" class="round-btn red">
+                        <span class="icon"><i class='bx bxs-phone' ></i></span>
+                        <span class="text">555-555-555</span>
+                    </a>
                     <p>OR</p>
-                    <button class="round-btn white">Send Us a Message <i class='bx bx-right-arrow-alt' ></i></button>
+                    <a href="/contact.html" class="round-btn white">
+                        <span class="text">Send Us a Message</span>
+                        <span class="icon"><i class='bx bx-right-arrow-alt' ></i></span>
+                    </a>
                 </div>
             </div>
     </section>

@@ -60,3 +60,57 @@ function openSpec(specLabel) {
     }
     document.getElementById(specLabel).style.display = "block";  
   }
+
+
+//   Hero popup image animation
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        const images = document.querySelectorAll('.hero-popup-img');
+        images.forEach((img, index) => {
+            setTimeout(() => {
+                img.classList.add('show');
+            }, index * 500);  // Delay each by 0.5s
+        });
+    }, 5000);  // Start 5 seconds after page load
+});
+
+
+
+
+
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown menu if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
+  // Form functionality
+  document.getElementById('leadForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+    try {
+        const response = await fetch('send_email.php', {
+            method: 'POST',
+            body: formData
+        });
+        
+        const result = await response.text();
+        alert(result); // success or error message
+    } catch (error) {
+        console.error('Error:', error);
+        alert('There was an issue submitting the form. Please try again.');
+    }
+});

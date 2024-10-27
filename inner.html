@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/style.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="shortcut icon" href="/assets/images/beloman-aloha-guy.png" type="image/x-icon">
     <title>Beloman - Why Choose Us</title>
 </head>
 <body>
@@ -61,6 +62,31 @@
                 <p>24/7 Emergency<br/><span>Service Available</span></p>
             </div>
         </div>
+        <div class="mobile-nav">
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn"><i class='bx bx-menu-alt-left'></i></button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="sales.html">HVAC Sales</a>
+                    <a href="#">Services</a>
+                        <a class="list-indent" href="sales.html">Air Conditioning</a>
+                        <a class="list-indent" href="sales.html">Furnaces</a>
+                        <a class="list-indent" href="sales.html">Air Handlers</a>
+                        <a class="list-indent" href="sales.html">Ductless Systems</a>
+                        <a class="list-indent" href="sales.html">Heat Pumps</a>
+                        <a class="list-indent" href="sales.html">Indoor Air Quality</a>
+                        <a class="list-indent" href="sales.html">HVAC Maintenance</a>
+                        <a class="list-indent" href="sales.html">Commercial HVAC</a>
+                    <a href="#">Promotions</a>
+                    <a href="#">About Us</a>
+                        <a href="inner.html">Why Choose Us</a>
+                        <a href="#">Customer Reviews</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+            <div class="available">
+                <p>24/7 Emergency<br/><span>Service Available</span></p>
+            </div>
+        </div>
     </nav>
     <div class="page-header">
         <h1>Why Choose Us</h1>
@@ -106,7 +132,7 @@
             </div>
             <div class="lead-form">
                 <h3>Get a Free Estimate Today</h3>
-                <form action="">
+                <form id="leadForm">
                     <input type="text" name="full-name" id="full-name" placeholder="Full Name*">
                     <input type="email" name="email" id="email" placeholder="Email Address*">
                     <input type="tel" name="phone" id="phone" placeholder="Phone Number*">
